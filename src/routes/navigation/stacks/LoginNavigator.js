@@ -6,6 +6,7 @@ import HeaderStyle from './headerComponents/HeaderStyle'
 
 import Login from '../../../scenes/login'
 import Registration from '../../../scenes/registration'
+import Onboarding from '../../../scenes/splash'
 
 const Stack = createStackNavigator()
 
@@ -15,10 +16,17 @@ export const LoginNavigator = () => {
   return (
     <Stack.Navigator screenOptions={navigationProps}>
       <Stack.Screen
+        name="Onboarding"
+        component={Onboarding}
+        options={({ navigation }) => ({
+          headerShown: false
+        })}
+      />
+      <Stack.Screen
         name="Login"
         component={Login}
         options={({ navigation }) => ({
-          headerBackground: scheme === 'dark' ? null: () => <HeaderStyle />,
+          headerShown: false
         })}
       />
       <Stack.Screen

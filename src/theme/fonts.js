@@ -9,6 +9,15 @@ export const fonts = {
     bold: 'openSans_bold',
     boldItalic: 'openSans_bold_italic',
   },
+  urbanist: {
+    regular: 'urbanist_regular',
+    medium: 'urbanist_medium',
+    semiBold: 'urbanist_semiBold',
+    semiBoldItalic: 'urbanist_semiBold_italic',
+    bold: 'urbanist_bold',
+    boldItalic: 'urbanist_bold_italic',
+    light : 'urbanist_light'
+  },
 }
 
 // fonts preloading
@@ -31,5 +40,25 @@ export const fontsAll = [
   {
     openSans_bold_italic: require('../../assets/fonts/OpenSans-BoldItalic.ttf'),
   },
+  {
+    urbanist_regular: require('../../assets/fonts/static/Urbanist-Regular.ttf'),
+  },
+  {
+    urbanist_medium: require('../../assets/fonts/static/Urbanist-Medium.ttf')
+  },
+
+  {
+    urbanist_semiBold : require('../../assets/fonts/static/Urbanist-SemiBold.ttf')
+  },
+  {
+    urbanist_semiBold_italic : require('../../assets/fonts/static/Urbanist-SemiBoldItalic.ttf')
+  },
+  {
+    urbanist_bold : require('../../assets/fonts/static/Urbanist-Bold.ttf')
+  },
+  {
+    urbanist_light : require('../../assets/fonts/static/Urbanist-Light.ttf')
+  },
+
 ]
 export const fontAssets = fontsAll.map((x) => Font.loadAsync(x))
