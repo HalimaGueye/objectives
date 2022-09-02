@@ -93,7 +93,7 @@ export default function onboarding() {
         data={data}
         onCloseButtonPress={handleOnClosePress}
         closeButtonText="Let's start"
-
+        closeButtonTextStyle = {styles.button}
       />
 
 
@@ -109,4 +109,8 @@ const styles = StyleSheet.create({
 
   subtitle : {
   },
+
+  button : {
+    r : "black"
+  }
 })

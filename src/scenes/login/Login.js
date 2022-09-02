@@ -58,11 +58,13 @@ export default function Login() {
 
   return (
     <ScreenTemplate>
+
+      <View style={styles.main}>
       <KeyboardAwareScrollView
-        style={styles.main}
+        style={styles.keyboard}
         keyboardShouldPersistTaps="always"
       >
-        <Logo />
+
         <TextInputBox
           placeholder='E-mail'
           onChangeText={(text) => setEmail(text)}
@@ -86,20 +88,41 @@ export default function Login() {
           <Text style={[styles.footerText, { color: colorScheme.text }]}>Don't have an account? <Text onPress={onFooterLinkPress} style={styles.footerLink}>Sign up</Text></Text>
         </View>
       </KeyboardAwareScrollView>
+      </View>
+
+
+
       <Spinner
         visible={spinner}
         textStyle={{ color: colors.white }}
         overlayColor="rgba(0,0,0,0.5)"
       />
+
+
+
     </ScreenTemplate>
   )
 }
 
 const styles = StyleSheet.create({
-  main: {
+  container: {
     flex: 1,
+  },
+  main: {
+    height : '100%',
+    backgroundColor: 'white',
     width: '100%',
   },
+  keyboard: {
+    flex: 1,
+    backgroundColor: '#292929',
+    borderTopRightRadius : 50,
+    borderTopLeftRadius : 50,
+    paddingTop : 40,
+    top : 150,
+    width: '100%',
+  },
+
   footerView: {
     flex: 1,
     alignItems: "center",
