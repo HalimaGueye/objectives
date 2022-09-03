@@ -4,7 +4,7 @@ import { colors } from 'theme'
 import { ColorSchemeContext } from '../context/ColorSchemeContext'
 
 export default function TextInputBox(props) {
-  const { 
+  const {
     secureTextEntry,
     placeholder,
     onChangeText,
